@@ -15,7 +15,7 @@ var options = {
 };
 var conn;
 
-api.getUsers = function getUsers(opts, callback) {
+api.getUsers = function getUsers(callback) {
   r.table(table)
     .orderBy(r.desc('registered'))
     // .orderBy({index: r.desc('registered')}) // TODO: Use index!

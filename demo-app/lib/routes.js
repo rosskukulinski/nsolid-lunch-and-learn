@@ -8,7 +8,7 @@ module.exports = router;
 router.get('/', function(req, res) {
   var users;
   var queueLength;
-  db.getUsers({}, function (err, users) {
+  db.getUsers(function (err, users) {
     if (err) {
       res.statusCode = 500;
       return res.end('Oops');
