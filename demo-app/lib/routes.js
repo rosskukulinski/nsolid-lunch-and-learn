@@ -8,14 +8,7 @@ module.exports = router;
 router.get('/', function(req, res) {
   var users;
   var queueLength;
-  async.parallel([
-    function getUsers(callback) {
-      db.getUsers({}, function (err, user) {
-        users = user;
-        return callback(err);
-      });
-    }
-  ], function(err) {
+  db.getUsers({}, function (err, users) {
     if (err) {
       res.statusCode = 500;
       return res.end('Oops');
@@ -23,5 +16,5 @@ router.get('/', function(req, res) {
     res.render('index', {
       users: users
     });
-  })
+  });
 });
