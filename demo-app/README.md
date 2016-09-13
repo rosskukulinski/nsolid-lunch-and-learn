@@ -2,8 +2,8 @@ User Directory
 
 ## Requirements
 
-* Node.js or N|Solid
-* RethinkDB running on localhost
+* [N|Solid](https://downloads.nodesource.com/)
+* [RethinkDB](https://rethinkdb.com/) running on localhost
 * Python RethinkDB Driver (for loading dataset)
   * `sudo pip install rethinkdb`
 * ab - Apache Benchmark
