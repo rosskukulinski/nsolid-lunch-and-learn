@@ -22,6 +22,12 @@ Load dataset into rethinkdb
 npm run db-load
 ```
 
+Verify `users` table created
+
+```
+open http://localhost:8080/#tables
+```
+
 Launch Application
 
 ```
@@ -31,4 +37,22 @@ NSOLID_APPNAME=demo-app node index.js
 Open App in Browser
 ```
 open http://localhost:3001
+```
+
+## Performance Deep deep-dive
+
+* Using N|Solid, take CPU Profile while running Benchmark
+
+```
+npm run benchmark
+```
+
+* How busy is our Node.js application?  If it's not doing anything... what is?
+
+* If our app is busy, what is it doing, and why?
+
+* For a harder benchmark, use
+
+```
+npm run benchmark-heavy
 ```
