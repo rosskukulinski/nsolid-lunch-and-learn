@@ -6,7 +6,8 @@
   "scripts": {
     "db-load": "rethinkdb import -f dataset/users.json --force --table demo.users --format=json --pkey=id",
     "benchmark": "ab -c 5 -n 20  -k localhost:3001/",
-    "benchmark-heavy": "ab -c 10 -n 200  -k localhost:3001/"
+    "benchmark-heavy": "ab -c 20 -n 200  -k localhost:3001/",
+    "benchmark-mega": "ab -c 50 -n 5000 -k localhost:3001/"
   },
   "author": "Ross Kukulinski <ross@nodesource.com>",
   "license": "MIT",

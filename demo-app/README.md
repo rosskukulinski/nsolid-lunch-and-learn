@@ -59,6 +59,8 @@ npm run benchmark-heavy
 
 * Did you remember to set NODE_ENV=production?
 
+* Is logging necessary? Where should the logs go?
+
 ## Managing Module Vulnerabilities
 
 * Does your application have any known vulnerabilities?

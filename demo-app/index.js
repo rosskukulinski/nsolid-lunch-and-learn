@@ -9,9 +9,8 @@ var express = require('express');
 var hbs = require('express-hbs');
 var logger = require('morgan');
 
-
 var app = express();
-app.use(logger('dev'));
+app.use(logger('dev')); // TODO: Use better logger (or none?)
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.engine('hbs', hbs.express4());
