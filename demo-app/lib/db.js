@@ -17,8 +17,8 @@ var conn;
 
 api.getUsers = function getUsers(opts, callback) {
   r.table(table)
-    .orderBy(r.desc('registered'))
-    // .orderBy({index: r.desc('registered')})
+    // .orderBy(r.desc('registered')) // TODO: Use index!
+    .orderBy({index: r.desc('registered')})
     .limit(1000)
     .run(conn, function(err, cursor) {
       if (err) {
@@ -28,6 +28,7 @@ api.getUsers = function getUsers(opts, callback) {
         if (err) {
           return callback(err);
         }
+        // TODO: Move moment calculation to the client
         _.each(result, function(user) {
           user.fromNow = moment(user.registered).fromNow();
         });

@@ -4,8 +4,9 @@
   "description": "South Park Directory",
   "main": "index.js",
   "scripts": {
-    "db-init": "rethinkdb import -f dataset/users.json --force --table demo.users --format=json --pkey=id",
-    "benchmark": "ab -c 5 -n 20  -k localhost:3001/"
+    "db-load": "rethinkdb import -f dataset/users.json --force --table demo.users --format=json --pkey=id",
+    "benchmark": "ab -c 5 -n 20  -k localhost:3001/",
+    "benchmark-heavy": "ab -c 10 -n 200  -k localhost:3001/"
   },
   "author": "Ross Kukulinski <ross@nodesource.com>",
   "license": "MIT",
@@ -15,7 +16,7 @@
     "express": "^4.14.0",
     "express-hbs": "^1.0.3",
     "lodash": "^4.15.0",
-    "moment": "^2.15.0",
+    "moment": "^2.11.1",
     "morgan": "^1.7.0",
     "rethinkdb": "^2.3.3"
   }
