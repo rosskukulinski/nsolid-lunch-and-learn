@@ -1,0 +1,22 @@
+{
+  "name": "demo-app",
+  "version": "1.0.0",
+  "description": "South Park Directory",
+  "main": "index.js",
+  "scripts": {
+    "db-init": "rethinkdb import -f dataset/users.json --force --table demo.users --format=json --pkey=id",
+    "benchmark": "ab -c 5 -n 20  -k localhost:3001/"
+  },
+  "author": "Ross Kukulinski <ross@nodesource.com>",
+  "license": "MIT",
+  "repository": "git@github.com:rosskukulinski/nsolid-lunch-and-learn.git",
+  "dependencies": {
+    "async": "^2.0.1",
+    "express": "^4.14.0",
+    "express-hbs": "^1.0.3",
+    "lodash": "^4.15.0",
+    "moment": "^2.15.0",
+    "morgan": "^1.7.0",
+    "rethinkdb": "^2.3.3"
+  }
+}
