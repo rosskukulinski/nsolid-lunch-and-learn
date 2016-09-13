@@ -57,6 +57,8 @@ npm run benchmark
 npm run benchmark-heavy
 ```
 
+* Did you remember to set NODE_ENV=production?
+
 ## Managing Module Vulnerabilities
 
 * Does your application have any known vulnerabilities?
