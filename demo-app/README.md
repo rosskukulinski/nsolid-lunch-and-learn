@@ -56,3 +56,9 @@ npm run benchmark
 ```
 npm run benchmark-heavy
 ```
+
+## Managing Module Vulnerabilities
+
+* Does your application have any known vulnerabilities?
+
+* If so, do you know how to fix them?

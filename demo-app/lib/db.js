@@ -17,8 +17,8 @@ var conn;
 
 api.getUsers = function getUsers(opts, callback) {
   r.table(table)
-    // .orderBy(r.desc('registered')) // TODO: Use index!
-    .orderBy({index: r.desc('registered')})
+    .orderBy(r.desc('registered')) // TODO: Use index!
+    // .orderBy({index: r.desc('registered')})
     .limit(1000)
     .run(conn, function(err, cursor) {
       if (err) {
